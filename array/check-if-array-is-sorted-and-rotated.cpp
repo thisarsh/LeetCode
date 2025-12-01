@@ -1,0 +1,14 @@
+class Solution {
+public:
+    bool check(vector<int>& nums) {
+        int n=nums.size(),count=0;
+         for(int i=0; i<n-1; i++){
+            if(nums[i]>nums[i+1])count++;
+            if(count>1 )return 0;
+         }
+         if(count==1 && nums[0]<nums.back())return 0;
+         return 1;       
+         
+
+    }
+};
