@@ -8,8 +8,9 @@ public:
                 prev=nums[i];
             }
             else prev--;
+            if(prev==0)return 0;
         }
-        if(prev)return 1;
-        return 0;
+        return 1;
+        // return 0;
     }
 };
