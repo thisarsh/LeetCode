@@ -9,6 +9,7 @@ public:
             else if( st.top ()=='{' && it!='}') return 0;
             else st.pop();
         }
+        if(st.size())return 0;
         return 1;
         
     }
