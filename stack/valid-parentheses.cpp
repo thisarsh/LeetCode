@@ -4,6 +4,7 @@ public:
         stack <char> st;
         for(auto it:s){
             if(it=='(' || it=='[' || it=='{') st.push(it);
+            else if(st.size()==0)return 0;
             else if( st.top ()=='(' && it!=')') return 0;
             else if( st.top ()=='[' && it!=']') return 0;
             else if( st.top ()=='{' && it!='}') return 0;
