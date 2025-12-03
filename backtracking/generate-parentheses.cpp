@@ -8,11 +8,11 @@ public:
       
        if(open<n) {
          
-          gen(ans,n,open+1,close,s+')');
+          gen(ans,n,open+1,close,s+'(');
        }
         if(close<open){
              
-             gen(ans,n,open,close+1,s+'(');
+             gen(ans,n,open,close+1,s+')');
         }
 
 
