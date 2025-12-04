@@ -1,24 +1,22 @@
 class Solution {
 public:
     int countCollisions(string directions) {
-        stack <char> st;
+        char prev=directions[0];
         int ans=0;
-        st.push(directions[0]);
-
         for(auto it:directions){
-          
-           if(st.top()=='R' && it!='R'){
-                if(it=='S')ans++;
-                if(it=='L')ans+=2;
-                st.pop();
-                st.push('S');
+            if(prev=='R' && it=='L'){
+                ans+=2;
+                prev='S';
             }
-            else if(st.top()=='S'){
-                if(it=='L'){
-                    ans++;
-                }
-
+            else if(prev=='R' && it=='S'){
+                ans++;
+                prev='S';
             }
+            else if(prev=='S' && it=='L'){
+                ans++;
+                prev='S';
+            }
+            else prev=it;
         }
         return ans;
     }
