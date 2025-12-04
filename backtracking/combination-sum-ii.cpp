@@ -12,10 +12,10 @@ public:
         temp.push_back(candidates[i]);
         f(candidates,target,ans,temp,i+1,sum+candidates[i]);
         temp.pop_back();
-        while(i<candidates.size() && candidates[i]==candidates[i+1]){
+        while(i+1<candidates.size() && candidates[i]==candidates[i+1]){
             i++;
         }
-        f(candidates,target,ans,temp,i+1,sum);
+       if(i<candidates.size()) f(candidates,target,ans,temp,i+1,sum);
         
 
      }
