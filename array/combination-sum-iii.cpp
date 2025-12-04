@@ -1,10 +1,11 @@
 class Solution {
 public:
     void f(vector <vector <int>> &ans,vector <int> &temp,int k,int n,int sum,int i,vector <int> &curr ){
-        if(curr.size()==k || i>8){
-            if(sum==n && i<9)ans.push_back(curr);
+        if(curr.size()==k ){
+            if(sum==n && curr.size()==k)ans.push_back(curr);
             return;
         }
+        if(i==9)return;
         // if(sum>n || k>curr.size() || i>8)return;
         curr.push_back(temp[i]);
         f(ans,temp,k,n,sum+temp[i],i+1,curr);
