@@ -5,7 +5,7 @@ public:
         for(auto it:corridor){
             if(it=='S')sum++;
         }
-        if(sum%2!=0 )return 0;
+        if(sum==0 || sum%2!=0 )return 0;
 
         for(auto it:corridor){
             if(it=='S')total++;
