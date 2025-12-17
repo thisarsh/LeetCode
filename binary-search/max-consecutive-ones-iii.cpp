@@ -5,21 +5,23 @@ public:
         int l=0,r=0;
         while(r<n){
             if(nums[r]){
+                ans=max(ans,r-l+1);
                 r++;
             }
             else if(temp){
                 temp--;
+                ans=max(ans,r-l+1);
                 r++;
             }
-            else {
-                ans=max(ans,r-l);
-                l=r;
-                temp=k;
-
+            else{
+                if(nums[l]==0){
+                    temp++;
+                }
+                l++;
             }
-
+            
         }
-        ans=max(ans,r-l);
+        
         return ans;
 
         
