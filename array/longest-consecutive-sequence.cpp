@@ -5,17 +5,15 @@ public:
     unordered_set <int> st(nums.begin(),nums.end());
     for(int i=0; i<nums.size(); i++){
 
-        if(st.count(nums[i]-1)){
+        if(!st.count(nums[i]-1)){
             int curr=nums[i];
-            len=1;
+            len=0;
+    
             while(st.count(curr)){
                 curr++;
                 len++;
             }
 
-        }
-        else {
-            len=1;
         }
         ans=max(len,ans);
      
