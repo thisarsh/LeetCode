@@ -14,7 +14,9 @@ public:
             }
 
         }
-        
+        else {
+            len=1;
+        }
         ans=max(len,ans);
      
     }
