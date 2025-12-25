@@ -14,13 +14,15 @@ public:
                 ans+=cardPoints[l++];
             }
             else{
-                ans+=cardPoints[l];
+                ans+=2*cardPoints[l];
                 l++;
                 r--;
+                total++;
             }
+            total++;
 
            
-            total++;
+            
 
         }
         return ans;
