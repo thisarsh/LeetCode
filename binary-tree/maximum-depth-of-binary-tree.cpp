@@ -11,8 +11,8 @@
  */
 class Solution {
     int depth(TreeNode *root,int count){
-        if(!root)return 1;
-        if(!root->left && !root->right)return count;
+        if(!root)return count;
+        // if(!root->left && !root->right)return count;
         if(root->left){
             count++;
             depth(root->left,count);
@@ -22,7 +22,7 @@ class Solution {
             depth(root->left,count);
         }
 
-        return count;
+        return count+1;
 
 
         
@@ -30,7 +30,7 @@ class Solution {
     }
 public:
     int maxDepth(TreeNode* root) {
-        return depth(root,1);
+        return depth(root,0);
         
     }
 };
