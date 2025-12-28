@@ -11,18 +11,11 @@
  */
 class Solution {
     int depth(TreeNode *root,int count){
-        if(!root)return count;
-        // if(!root->left && !root->right)return count;
-        if(root->left){
-            count++;
-            depth(root->left,count);
-        }
-        if(root->right){
-            count++;
-            depth(root->left,count);
-        }
+        if(!root)return 0;
+        int ldepth=depth(root->left ,count+1);
+        int rdepth=depth(root->right ,count+1);
 
-        return count+1;
+        return max(ldepth,rdepth)+1;
 
 
         
