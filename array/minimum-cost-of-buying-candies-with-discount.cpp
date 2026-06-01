@@ -19,6 +19,14 @@ public:
 
            }
         }
+        if(n%3==1){
+            ans+=cost[0];
+            
+        }
+        if(n%3==2 ){
+            ans+=cost[0]+cost[1];
+            
+        }
         return ans;
         
     }
