@@ -12,6 +12,7 @@ public:
         f(ans,nums,i+1,curr);
     }
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
         vector <vector <int>> ans;
         vector <int> curr;
         f(ans,nums,0,curr);
