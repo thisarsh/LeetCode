@@ -22,7 +22,7 @@ public:
 
     }
     int maxDepth(TreeNode* root) {
-        int ans;
+        int ans=0;
         dfs(root,0,ans);
         return ans;
         
