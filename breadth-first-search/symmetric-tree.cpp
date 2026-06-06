@@ -15,7 +15,7 @@ public:
         if(!l && !r) return 1;
         if(!l || !r)return 0; 
         if(l->val!=r->val)return 0;
-       if( dfs(l->right,r->left) && dfs(r->left,l->right)) return 1;
+       if( dfs(l->right,r->left) && dfs(r->right,l->left)) return 1;
        return 0;
 
 
