@@ -20,6 +20,8 @@ public:
     void dfs(TreeNode *node,int &ans){
         if(!node)return;
        ans=max(ans,d(node->left)+d(node->right));
+       dfs(node->left,ans);
+       dfs(node->right,ans);
         return;      
 
     }
